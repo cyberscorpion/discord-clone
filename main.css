@@ -26,14 +26,14 @@ html {
 :root {
     --light-clr: #FFF;
     --dark-clr: #23272A;
-    --brand-clr: #7289DA;
+    --brand-clr: #5865f2;
     --off-white-clr: #f6f6f6;
     --general-font-size: 2rem;
     --primary-title-font-size: 4.8rem;
     --main-font-family-light: 'Whitney Light', sans-serif;
     --main-font-family-medium: 'Whitney Medium', sans-serif;
     --main-font-family-bold: 'Whitney Bold', sans-serif;
-    --num-of-grid-columns: 8;
+    --num-of-grid-columns: 12;
     --section-spacing: 5.6rem 4rem;
     --container-width: 126rem;
 }
@@ -41,7 +41,6 @@ html {
 body {
     font-size: var(--general-font-size);
     font-family: var(--main-font-family-light);
-    /* background-color: yellow; */
 }
 
 a {
@@ -132,15 +131,13 @@ img {
     font-weight: bold;
     padding: 1rem;
     margin: 0 1rem;
+    color: white;
 }
 
 .nav-link:hover {
     text-decoration: undefined;
 }
 
-.nav-list  a {
-    color: white;
-}
 
 /* part 2 */
 
@@ -152,10 +149,9 @@ img {
 }
 
 .hero-content-wrap {
-    grid-column: span var(--num-of-grid-columns);
+    grid-column: 3/span 8;
     color: white;
     text-align: center;;
-    
 }
 
 .hero-btn-group .btn-light{
@@ -202,19 +198,31 @@ img {
 /* Part 3 */
 .grid-image{
     /* margin-top: 2.4rem; */
-    margin: auto 0 ;
-    grid-column: span 4;
+    margin:  0 ;
+    grid-column: span 7;
 }
 
 .text-group {
+    grid-column: 9/-1;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
     grid-column: span 4;
+    justify-content: center;
 }
 
 .secondary-title{
     font-size: 5rem;
     font-family: 'Whitney Bold', sans-serif;
-    text-align: center;
+}
+
+.order-1{
+    order:1;
+}
+
+
+.order-2{
+    order:2;
 }
 
 .text-group p {
@@ -228,6 +236,7 @@ img {
 }
 .video-call {
     background-color: #f6f6f6;
+    text-align: center;;
 }
 
 .video-call .row{
@@ -235,7 +244,7 @@ img {
 }
 
 .video-call .text-group {
-    grid-column: span var(--num-of-grid-columns);
+    grid-column: 2/span 10;
     margin-top:0;
 }
 
@@ -271,7 +280,7 @@ img {
 }
 
 .btn-brand{
-    background-color: #7289DA;
+    background-color: #5865f2;
     color: white;
 }
 
@@ -281,4 +290,98 @@ img {
 
 .btn-brand:hover{
     background-color: #8ea1e1
+}
+
+
+/* footer */
+.main-footer{
+    background-color: #23272A;
+    color: white;
+    padding: 8rem 2.4rem 6.4rem
+}
+
+.main-footer .row{
+    padding:0
+}
+
+.info-box{
+    grid-column: span 3;
+    grid-row: span 2;
+    margin-bottom: 5.6rem;
+}
+
+.footer-title{
+    color:#5865f2
+}
+
+.info-box .footer-title{
+    font-size: 3.2rem;
+    font-family: 'Whitney Medium', sans-serif;
+    font-weight:bold;
+}
+.languages{
+    margin: 2.4rem 0;
+    display: flex;
+    align-items: center
+    font-size: 1.4rem;
+}
+
+.languages img{
+    width: 2.4rem;
+}
+
+.languages span{
+    margin: 0 .8rem;
+}
+
+.sm-link {
+    font-size: 2.3rem;
+    color: inherit;
+    margin-right: 2rem;
+}
+
+.spacer{
+    display: block;
+    grid-row: span 2;
+}
+
+.footer-links-group{
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+    grid-column: span 2;
+}
+
+.footer-links-group .footer-title{
+    font-size: inherit;
+    padding-top: .8rem;
+    font-weight: 100;
+}
+
+.footer-link{
+    display: block;
+    margin-top: 1.2rem;
+    color: inherit;
+}
+
+.divider {
+    grid-column: 1/-1;
+    height:1px;
+    background-color:#5865f2;
+    margin-bottom: 3.2rem;
+}
+
+.main-footer .romove-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-footer .btn-brand {
+    line-height: 1.8;
+    grid-column: 11/12;
+    text-align: center;
+}
+
+.btn-footer {
+    min-width: 12rem;
 }
